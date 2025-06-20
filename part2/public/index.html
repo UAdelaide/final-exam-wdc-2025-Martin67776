@@ -94,11 +94,12 @@
             <td>{{ dog.name }}</td>
             <td>{{ dog.size }}</td>
             <td>{{ dog.owner_id }}</td>
-            <td @load="fetch"></td>
+            <td @load="fetchDogPic()"></td>
           </tr>
         </table>
       </div>
       `,
+      
     }
 
     createApp({
