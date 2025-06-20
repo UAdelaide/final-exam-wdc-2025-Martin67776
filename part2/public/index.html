@@ -110,6 +110,7 @@
         this.fetchDogList();
       },
       methods: {
+        // get dog list
         fetchDogList() {
           fetch('/api/dogs', {}).then((res) => {
             return res.json().then((data) => {
@@ -123,7 +124,9 @@
           }).catch((err) => {
             this.error = err;
           });
-        }
+        },
+
+        // get dog pic
       }
     }
 
