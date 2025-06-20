@@ -55,8 +55,10 @@
             return res.json();
           }).then((res) => {
             if (res.role === 'owner') {
+              // if owner
               window.location.href = '/owner-dashboard.html';
             } else if (res.role === 'walker') {
+              // if walker
               window.location.href = '/walker-dashboard.html';
             }
           }).catch((err) => {
