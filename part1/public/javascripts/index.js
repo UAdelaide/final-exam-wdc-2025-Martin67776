@@ -18,13 +18,13 @@ const DogPic = {
         fetchImage(count) {
             if (count > 10) {
                 fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'GET'
-            }).then((res) => res.json())
-            .then((res) => {
-                this.picLink = res.message;
-            }).catch((err) => {
-                throw err;
-            });
+                    method: 'GET'
+                }).then((res) => res.json())
+                .then((res) => {
+                    this.picLink = res.message;
+                }).catch((err) => {
+                    throw err;
+                });
             }
         }
     }
