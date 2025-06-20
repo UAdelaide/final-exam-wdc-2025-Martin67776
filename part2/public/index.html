@@ -133,7 +133,8 @@
               method: 'GET'
             });
             const data = res.json();
-            if (1res.ok) {
+            if (!res.ok) {
+              throw new Error(data.error);
 
             }
           } catch (err) {
