@@ -100,8 +100,10 @@ let db;
         INSERT INTO Users (username, email, password_hash, role) VALUES ('user123', 'user@example.com', 'hashed345', 'owner');
       `);
     }
-    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
-    if (rows[0].count === 0)
+    const [rows2] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (rows2[0].count === 0) {
+      
+    }
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
