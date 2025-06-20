@@ -16,7 +16,7 @@ const DogPic = {
     },
     methods: {
         fetchImage(count) {
-            if (count > 10) {
+            if (count === 10) {
                 fetch('https://dog.ceo/api/breeds/image/random', {
                     method: 'GET'
                 }).then((res) => res.json())
@@ -25,6 +25,7 @@ const DogPic = {
                 }).catch((err) => {
                     throw err;
                 });
+                c
             }
         }
     }
