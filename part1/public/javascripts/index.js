@@ -12,11 +12,11 @@ const DogPic = {
         };
     },
     mounted() {
-        this.fetchImage();
+        this.fetchImage(0);
     },
     methods: {
-        fetchImage() {
-            if (this.counter)
+        fetchImage(count) {
+            if (count )
             fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'GET'
             }).then((res) => res.json())
