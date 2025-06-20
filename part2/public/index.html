@@ -129,17 +129,15 @@
         // get dog pic
         fetchDogPic() {
           try {
+            const res = fetch('https://dog.ceo/api/breeds/image/random', {
+              method: 'GET'
+            });
+            if (res.ok) {
 
+            }
           } catch (err) {
-            this.err
+            this.error = err;
           }
-          const res = fetch('https://dog.ceo/api/breeds/image/random', {
-            method: 'GET'
-          });
-          if (res.ok) {
-
-          }
-
 
         }
       }
