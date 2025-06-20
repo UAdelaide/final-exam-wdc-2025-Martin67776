@@ -105,12 +105,11 @@
             return res.json().then((data) => {
               if (!res.ok) {
                 throw new Error(data.error || "fetch dog list failed");
-
               }
+              return data;
             });
-
           }).then((res) => {
-
+            
           }).catch((err) => {
             error = err;
           });
