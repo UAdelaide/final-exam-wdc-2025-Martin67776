@@ -125,7 +125,7 @@
             this.error = err;
           });
           for (const dogs of dogList) {
-            dogs.photo = fetchDogPic();
+            dogs.photo = await fetchDogPic();
           }
         },
 
