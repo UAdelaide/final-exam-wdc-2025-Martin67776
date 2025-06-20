@@ -48,7 +48,9 @@
       methods: {
         login() {
           fetch('/api/users/login', {
-            method: 'POST'
+            method: 'POST',
+            credentials: 'include',
+            
           }).then((res) => {
             res.json()
           }).then((res) => {
