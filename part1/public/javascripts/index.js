@@ -1,7 +1,7 @@
 const DogPic = {
     template: `
     <div>
-        <button type="button" >Click 100 times to see the picture</button>
+        <button type="button" @click="counter+1">Click 100 times to see the picture</button>
         <img :src="picLink">
     </div>
     `,
