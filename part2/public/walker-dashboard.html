@@ -48,9 +48,10 @@
         // logout
         async function logout() {
           fetch('/api/users/logout', {
-            method: ''
+            method: 'POST',
+            credentials: "include"
           }).then((res) => {
-
+            message
           }).catch((err) => {
             error = err
           })
