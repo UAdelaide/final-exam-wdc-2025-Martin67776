@@ -109,9 +109,9 @@
               return data;
             });
           }).then((res) => {
-            dogList = res.list;
+            dogList.value = res.list;
           }).catch((err) => {
-            error = err;
+            error.value = err;
           });
         }
 
