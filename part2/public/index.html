@@ -12,7 +12,7 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
-    
+    <login-form></login-form>
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
   </div>
@@ -25,7 +25,7 @@
           message: 'Welcome to the Dog Walking Service!'
         };
       }
-    }).component('login-form', LoginForm).mount('#app');
+    }).mount('#app');
     const LoginForm = {
       template: `
       <div class="loginForm">
