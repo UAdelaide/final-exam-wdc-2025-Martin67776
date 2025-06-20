@@ -136,7 +136,7 @@
             if (!res.ok) {
               throw new Error("error fetching pictures");
             }
-            return data
+            return data.message;
           } catch (err) {
             this.error = err;
           }
