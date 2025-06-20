@@ -112,7 +112,12 @@
       methods: {
         fetchDogList() {
           fetch('/api/dogs', {}).then((res) => {
-            return res.
+            return res.json().then((data) => {
+              if (!res.ok) {
+                throw new Error();
+
+              }
+            })
           }).then((res) => {
             this.dogList = res.dogs;
           }).catch((err) => {
