@@ -1,1 +1,3 @@
-Vue.component
+Vue.component('dog-pic', {
+    
+});
