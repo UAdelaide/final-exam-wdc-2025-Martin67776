@@ -146,7 +146,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
 router.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [walker] = await db.execute('SELECT Users.username AS walker_username, rating');
+    // const [walker] = await db.execute('SELECT Users.username AS walker_username, rating');
   } catch (dErr) {
     return res.status(500).json({ error: 'DB error' });
   }
