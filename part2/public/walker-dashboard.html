@@ -71,20 +71,14 @@
 
         // get current user id
         async function getCurrentUser() {
-          await fetch('/api/users/me', {
+          try {
+
+          } catch (err) {
+            
+          }
+          const res = await fetch('/api/users/me', {
             method: 'GET',
             credentials: "include"
-          }).then((res) => {
-            return res.json().then((data) => {
-              if (!res.ok) {
-                throw new Error(data.error || "failed fetching current user id");
-              }
-              return data;
-            })
-          }).then((res) => {
-            return res.user_id;
-          }).catch((err) => {
-            error.message = err;
           })
         }
 
