@@ -82,7 +82,9 @@
 
         // log out
         async function logout() {
-          fetch('/api/users/logout')
+          fetch('/api/users/logout', {}).then().catch((err) => {
+            throw err;
+          })
         }
 
         async function loadWalks() {
