@@ -102,7 +102,8 @@
       `,
       data() {
         return {
-          error
+          error: '',
+          dogList: []
         };
       },
       mounted() {
@@ -110,8 +111,8 @@
       },
       methods: {
         fetchDogList() {
-          fetch('/api/dogs', {}).then().then().catch((err) => {
-
+          fetch('/api/dogs', {}).then((res)).then().catch((err) => {
+            
           });
         }
       }
