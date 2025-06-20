@@ -1,4 +1,4 @@
-Vue.component('dog-pic', {
+const DgPic('dog-pic', {
     template: `
     <div>
         <img :src="picLink" alt="Cannot retrieve image">
