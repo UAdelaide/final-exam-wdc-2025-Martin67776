@@ -112,7 +112,9 @@ let db;
     }
     const [rows3] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
     if (rows3[0].count === 0) {
-      await db.execute(``)
+      await db.execute(`
+        
+      `);
     }
 
   } catch (err) {
