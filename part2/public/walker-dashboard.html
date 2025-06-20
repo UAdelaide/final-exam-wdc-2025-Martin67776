@@ -71,7 +71,7 @@
 
         // get current user id
         async function getCurrentUser() {
-          fetch('/api/users/me', {
+          await fetch('/api/users/me', {
             method: 'GET',
             credentials: "include"
           }).then((res) => {
