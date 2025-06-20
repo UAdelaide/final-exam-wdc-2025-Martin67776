@@ -4,4 +4,10 @@ Vue.component('dog-pic', {
         <img src="{{ pic }}" alt="Cannot retrieve image">
     </div>
     `,
+    data() {
+        return {
+
+        };
+    },
+    
 });
