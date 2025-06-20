@@ -33,9 +33,6 @@ let db;
 
     // Create a table if it doesn't exist
     await db.execute(`
-      DROP DATABASE IF EXISTS DogWalkService;
-      CREATE DATABASE DogWalkService;
-      USE DogWalkService;
       CREATE TABLE Users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) UNIQUE NOT NULL,
