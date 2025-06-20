@@ -127,7 +127,7 @@ let db;
 })();
 
 router.get('/api/dogs', async (req, res) => {
-  const [dogs] = await db.execute('SELECT name, ')
+  const [dogs] = await db.execute('SELECT name, size, ')
 });
 
 module.exports = router;
