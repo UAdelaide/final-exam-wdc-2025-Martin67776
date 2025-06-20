@@ -126,6 +126,6 @@ let db;
   }
 })();
 
-
+router.get('/api');
 
 module.exports = router;
