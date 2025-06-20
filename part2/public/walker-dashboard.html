@@ -74,7 +74,9 @@
           fetch('/api/users/me', {
 
           }).then((res) => {
-            r
+            return res.json().then((data) => {
+              
+            })
           }).then((res) => {
 
           }).catch((err) => {
