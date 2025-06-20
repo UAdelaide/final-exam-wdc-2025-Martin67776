@@ -81,6 +81,7 @@
             if (!res.ok) {
               throw new Error(data.error || 'Failed to fecth user ID');
             }
+            // return user id
             return data.user_id;
           } catch (err) {
             error.value = err.message;
