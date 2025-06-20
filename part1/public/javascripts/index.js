@@ -7,7 +7,8 @@ const DogPic = {
     `,
     data() {
         return {
-            picLink: ''
+            picLink: '',
+            counter: 0
         };
     },
     mounted() {
@@ -15,6 +16,7 @@ const DogPic = {
     },
     methods: {
         fetchImage() {
+            if (this.counter)
             fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'GET'
             }).then((res) => res.json())
