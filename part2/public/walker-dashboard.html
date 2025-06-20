@@ -45,7 +45,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const user = await getCurrentUser();
+        const user = getCurrentUser();
 
         // logout
         async function logout() {
