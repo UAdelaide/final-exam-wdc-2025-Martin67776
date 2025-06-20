@@ -1,4 +1,4 @@
-const DgPic('dog-pic', {
+const DogPic = {
     template: `
     <div>
         <img :src="picLink" alt="Cannot retrieve image">
