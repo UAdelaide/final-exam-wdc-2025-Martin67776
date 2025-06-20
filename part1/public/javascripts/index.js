@@ -25,3 +25,7 @@ Vue.component('dog-pic', {
         }
     }
 });
+
+var vueapp = new Vue() {
+    
+}
