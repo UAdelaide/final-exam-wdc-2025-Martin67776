@@ -58,6 +58,7 @@
               if (!res.ok || !data.role) {
                 throw new Error(data.message || 'Login failed. Please check your credentials!');
               }
+              return data;
             });
           }).then((res) => {
             if (res.role === 'owner') {
