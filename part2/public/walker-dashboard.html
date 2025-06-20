@@ -78,9 +78,9 @@
             })
             const data = await res.json();
             if (!res.ok) {
-              throw new Error("");
-              
+              throw new Error(data.error || 'Failed to fecth user ID');
             }
+            return data.user_id;
           } catch (err) {
 
           }
