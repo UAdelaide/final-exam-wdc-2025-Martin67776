@@ -59,6 +59,7 @@ router.post('/:id/apply', async (req, res) => {
   }
 });
 
-// Get dogs list for a specific user
+// Get dogs list for a specific owner
+router.post
 
 module.exports = router;
