@@ -18,10 +18,10 @@ Vue.component('dog-pic', {
                 method: 'GET'
             }).then((res) => res.json())
             .then((res) => {
-                this.picLink = res.
+                this.picLink = res.message;
             }).catch((err) => {
                 throw err;
-            })
+            });
         }
     }
 });
