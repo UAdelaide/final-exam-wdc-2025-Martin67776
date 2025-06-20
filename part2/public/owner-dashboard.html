@@ -100,7 +100,7 @@
         async function loadDog() {
           fetch('/api/walks/pets', {
             method: 'GET',
-            credentials: 
+            credentials: 'include'
           }).then((res) => res.json())
           .then((res) => {
 
