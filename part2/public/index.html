@@ -50,7 +50,12 @@
           fetch('/api/users/login', {
             method: 'POST',
             credentials: 'include',
-            
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              
+            })
           }).then((res) => {
             res.json()
           }).then((res) => {
