@@ -27,6 +27,5 @@ const DogPic = {
 };
 
 const app = Vue.createApp({});
-app = component('dog-pic')
-    el: '#container'
-});
+app = component('dog-pic, DogPic');
+app.mount('#container');
