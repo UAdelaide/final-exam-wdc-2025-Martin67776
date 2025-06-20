@@ -50,9 +50,9 @@
               password: this.password
             })
           }).then((res) => {
-            res.json();
+            return res.json();
           }).then((res) => {
-            
+
           }).catch((err) => {
             throw err;
           });
