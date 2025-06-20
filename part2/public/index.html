@@ -54,7 +54,8 @@
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              username, password
+              username: this.username,
+              password
             })
           }).then((res) => {
             res.json()
