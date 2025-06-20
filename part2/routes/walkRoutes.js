@@ -64,7 +64,7 @@ router.get('/pets', async (req, res) => {
   const id = req.session.user.user_id;
   try {
     const [rows] = await db.query('SELECT * FROM Dogs WHERE owner_id = ?;', [id]);
-    return res.json(rows);
+    return res.json({ list: rows });
   } catch (dErr) {
     return res.status(500).json({ error: 'DB error' });
   }
