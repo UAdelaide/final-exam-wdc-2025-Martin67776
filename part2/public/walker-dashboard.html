@@ -76,7 +76,11 @@
               method: 'GET',
               credentials: "include"
             })
-            const data = r
+            const data = await res.json();
+            if (!res.ok) {
+              throw new Error("");
+              
+            }
           } catch (err) {
 
           }
