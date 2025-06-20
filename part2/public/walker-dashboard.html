@@ -71,7 +71,11 @@
 
         // get current user id
         async function getCurrentUser() {
-          fetch('/api/users/me')
+          fetch('/api/users/me', {
+
+          }).then((res) => {
+
+          })
         }
 
         async function applyToWalk(requestId) {
