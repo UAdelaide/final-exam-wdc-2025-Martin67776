@@ -124,7 +124,7 @@
           }).catch((err) => {
             this.error = err;
           });
-          for (const dogs of dogList) {
+          for (const dogs of this.dogList) {
             dogs.photo = await fetchDogPic();
           }
         },
