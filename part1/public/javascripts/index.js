@@ -14,8 +14,10 @@ Vue.component('dog-pic', {
     },
     methods: {
         fetchImage() {
-            fetch('https://dog.ceo/api/breeds/image/random', {}).then((res) => {
-                
+            fetch('https://dog.ceo/api/breeds/image/random', {
+                method: 'GET'
+            }).then((res) => {
+
             }).catch((err) => {
                 throw err;
             })
