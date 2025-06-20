@@ -8,4 +8,4 @@ INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Bella', 'small') WHERE o
 INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Sheep', 'large') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'alice123');
 INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Cat', 'medium') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'user123');
 INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Duck', 'small') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'carol123');
-INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, )
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
