@@ -144,7 +144,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
 router.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [walker] = await db.execute(`SELECT Users.username AS walker_username, COUNT(WalkRating.walker_id) AS total_rating, AVG(WalkRating.rating) AS average_rating, COUNT(CASE WHEN WalkApplication.status = 'completed' THEN 1 END) AS completed_walks FROM Users INNER JOIN WalkRatings ON Users.user_id = walker_id INNER JOIN WalkRequests ON WalkRatings.request_id = WalkRequests.request_id WHERE Users.role = 'walker' GROUP BY Users.user_id;`);
+    const [walker] = await db.execute(`SELECT Users.username AS walker_username, COUNT(WalkRatings.walker_id) AS total_rating, AVG(WalkRating.rating) AS average_rating, COUNT(CASE WHEN WalkApplication.status = 'completed' THEN 1 END) AS completed_walks FROM Users INNER JOIN WalkRatings ON Users.user_id = walker_id INNER JOIN WalkRequests ON WalkRatings.request_id = WalkRequests.request_id WHERE Users.role = 'walker' GROUP BY Users.user_id;`);
     return res.json(walker);
   } catch (dErr) {
     return res.status(500).json({ error: 'DB error' });
