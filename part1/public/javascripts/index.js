@@ -25,7 +25,7 @@ const DogPic = {
                 }).catch((err) => {
                     throw err;
                 });
-                counter = 0;
+                this.counter = 0;
             }
         }
     }
