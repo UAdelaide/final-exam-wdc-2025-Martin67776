@@ -127,7 +127,7 @@ let db;
 })();
 
 router.get('/api/dogs', async (req, res) => {
-  const [dogs] = await db.execute('SELECT name, size, owner_id FROM Users INNER JOIN Dogs ON ')
+  const [dogs] = await db.execute('SELECT Dogs.name, size, owner_id FROM Users INNER JOIN Dogs ON ')
 });
 
 module.exports = router;
