@@ -112,7 +112,7 @@
       methods: {
         fetchDogList() {
           fetch('/api/dogs', {}).then((res)).then().catch((err) => {
-            
+            this.error = err;
           });
         }
       }
