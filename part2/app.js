@@ -25,11 +25,17 @@ app.use(session({
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const dogRoutes = require('./routes/dogRoutes');
+app.get('/', async (req, res) => {
+  try {
+    const [dogs] = await db.execute('SELECT * FROM Dogs;');
+    return res.json({ dogs: dogs });
+  } catch (dErr) {
+    return res.status(500).json({ error: 'DB error' });
+  }
+});
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/dogs', dogRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
