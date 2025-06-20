@@ -1,12 +1,12 @@
 Vue.component('dog-pic', {
     template: `
     <div>
-        <img src="{{ pic }}" alt="Cannot retrieve image">
+        <img src="{{ picLink }}" alt="Cannot retrieve image">
     </div>
     `,
     data() {
         return {
-
+            picLink: ''
         };
     },
     mounted() {
@@ -18,7 +18,7 @@ Vue.component('dog-pic', {
                 method: 'GET'
             }).then((res) => res.json())
             .then((res) => {
-                
+
             }).catch((err) => {
                 throw err;
             })
