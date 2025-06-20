@@ -1,7 +1,7 @@
 const DogPic = {
     template: `
     <div>
-        <button type="button" @click="counter+1">Click 100 times to see the picture</button>
+        <button type="button" @click="fetchImage(">Click 10 times to see the picture</button>
         <img :src="picLink">
     </div>
     `,
@@ -16,10 +16,16 @@ const DogPic = {
     },
     methods: {
         fetchImage(count) {
-            if (count > 100) {
-
+            if (count > 10) {
+                fetch('https://dog.ceo/api/breeds/image/random', {
+                method: 'GET'
+            }).then((res) => res.json())
+            .then((res) => {
+                this.picLink = res.message;
+            }).catch((err) => {
+                throw err;
+            });
             }
-
         }
     }
 };
