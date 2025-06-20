@@ -81,6 +81,7 @@
       // dog list template
       template: `
       <div>
+        <div v-if="error" class="alert alert-danger">{{ error }}</div>
         <table>
           <tr>
             <th>Dog ID</th>
@@ -101,7 +102,7 @@
       `,
       data() {
         return {
-
+          error
         };
       },
       mounted() {
@@ -110,7 +111,7 @@
       methods: {
         fetchDogList() {
           fetch('/api/dogs', {}).then().then().catch((err) => {
-            
+
           });
         }
       }
