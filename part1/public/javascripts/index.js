@@ -1,7 +1,7 @@
 Vue.component('dog-pic', {
     template: `
     <div>
-        <img :src="{{ picLink" alt="Cannot retrieve image">
+        <img :src="picLink" alt="Cannot retrieve image">
     </div>
     `,
     data() {
