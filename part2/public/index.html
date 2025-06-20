@@ -132,13 +132,13 @@
             const res = fetch('https://dog.ceo/api/breeds/image/random', {
               method: 'GET'
             });
-            if (res.ok) {
+            const data = res.json();
+            if (1res.ok) {
 
             }
           } catch (err) {
             this.error = err;
           }
-
         }
       }
     }
