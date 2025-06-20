@@ -1,7 +1,7 @@
 const DogPic = {
     template: `
     <div>
-        <h1>Schauen Sie sich dieses </h1>
+        <h1>Schauen Sie sich dieses Hundebild an</h1>
         <button type="button" @click="fetchImage(counter++)">Click 10 times to see a new picture</button>
         <img :src="picLink">
     </div>
