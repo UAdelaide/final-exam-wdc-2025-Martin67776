@@ -139,6 +139,7 @@
             if (!res.ok) {
               throw new Error("error fetching pictures");
             }
+            console.log
             return data.message;
           } catch (err) {
             this.error = err;
