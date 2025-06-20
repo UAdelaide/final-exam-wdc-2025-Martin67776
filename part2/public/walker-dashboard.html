@@ -87,7 +87,7 @@
           })
         }
 
-        async function applyToWalk(requestId) {
+        async function applyToWalk() {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
