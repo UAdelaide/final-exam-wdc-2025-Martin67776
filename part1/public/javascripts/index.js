@@ -1,8 +1,8 @@
 const DogPic = {
     template: `
     <div>
-        <button type="button"><
-        <img :src="picLink" alt="Cannot retrieve image">
+        <button type="button">Click </button>
+        <img :src="picLink">
     </div>
     `,
     data() {
