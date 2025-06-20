@@ -114,9 +114,9 @@
           fetch('/api/dogs', {}).then((res) => {
             return res.json().then((data) => {
               if (!res.ok) {
-                throw new Error();
-
+                throw new Error(data.error || "Error fetching dog list");
               }
+              return data;
             })
           }).then((res) => {
             this.dogList = res.dogs;
