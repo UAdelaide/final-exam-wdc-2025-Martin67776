@@ -56,7 +56,7 @@
           }).then((res) => {
             return res.json().then((data) => {
               if (!res.ok || !data.role) {
-                throw 
+                throw new Error(data.message || 'Login failed. Please check your cre')
               }
             });
           }).then((res) => {
