@@ -82,7 +82,12 @@
 
         // log out
         async function logout() {
-          fetch('/api/users/logout', {}).then().catch((err) => {
+          fetch('/api/users/logout', {
+            method: 'POST',
+            credentials: 'include'
+          }).then((res) => {
+
+          }).catch((err) => {
             throw err;
           })
         }
