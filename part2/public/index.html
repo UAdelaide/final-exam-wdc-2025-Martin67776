@@ -54,7 +54,9 @@
           }).then((res) => {
             if (res.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
-            } else if (res.role === )
+            } else if (res.role === 'walker') {
+              window.location.href
+            }
           }).catch((err) => {
             throw err;
           });
