@@ -137,7 +137,7 @@ router.get('/api/dogs', async (req, res) => {
 
 router.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [open] = await db.execute();
+    const [open] = await db.execute('SELECT request_id, ');
   } catch (dErr) {
     return res.status(500).json({ error: 'DB error' });
   }
