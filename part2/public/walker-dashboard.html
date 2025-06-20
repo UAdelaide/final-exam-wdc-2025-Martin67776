@@ -77,7 +77,9 @@
 
           }).then((res) => {
 
-          }).catch((err)
+          }).catch((err) => {
+            error.message = err;
+          })
         }
 
         async function applyToWalk(requestId) {
