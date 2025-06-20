@@ -95,7 +95,7 @@
             <td>{{ dog.name }}</td>
             <td>{{ dog.size }}</td>
             <td>{{ dog.owner_id }}</td>
-            <td @load="fetchDogPic()"></td>
+            <td><img src="</td>
           </tr>
         </table>
       </div>
@@ -129,7 +129,7 @@
         // get dog pic
         fetchDogPic() {
           fetch('https://dog.ceo/api/breeds/image/random', {}).then().then((res) => {
-            
+
           }).catch((err) => {
             this.error = err;
           });
