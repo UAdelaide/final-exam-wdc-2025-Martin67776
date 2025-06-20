@@ -110,6 +110,11 @@ let db;
         INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Duck', 'small');
       `);
     }
+    const [rows3] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (rows3[0].count === 0) {
+
+    }
+
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
