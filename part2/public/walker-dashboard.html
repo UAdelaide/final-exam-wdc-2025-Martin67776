@@ -72,14 +72,14 @@
         // get current user id
         async function getCurrentUser() {
           try {
-
+            const res = await fetch('/api/users/me', {
+              method: 'GET',
+              credentials: "include"
+            })
+            const data = r
           } catch (err) {
-            
+
           }
-          const res = await fetch('/api/users/me', {
-            method: 'GET',
-            credentials: "include"
-          })
         }
 
         async function applyToWalk(requestId) {
