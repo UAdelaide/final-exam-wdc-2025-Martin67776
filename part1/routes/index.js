@@ -126,8 +126,8 @@ let db;
   }
 })();
 
-router.get('/api/dogs', (req, res) => {
-  db.execute('')
+router.get('/api/dogs', async (req, res) => {
+  const [dogs] = await db.execute('SELECT ')
 });
 
 module.exports = router;
