@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const morgan = require('morgan');
+const db = require('../models/db');
 require('dotenv').config();
 
 const app = express();
