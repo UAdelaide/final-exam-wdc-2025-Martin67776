@@ -12,7 +12,12 @@ app.use(session({
     secret: '6845ED7F6TVYGOB8UI3QHP4EOGHAEROYIVBGUHDFJ',
     resave: false,
     saveUninitialized: false,
-    cookie
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        sameSite: 'lax',
+        maxAge: 1000*60*60
+    }
 }));
 
 // Routes
