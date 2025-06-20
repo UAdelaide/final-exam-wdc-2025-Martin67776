@@ -60,6 +60,6 @@ router.post('/:id/apply', async (req, res) => {
 });
 
 // Get dogs list for a specific owner
-router.get('/pets')
+router.get('/pets/:id')
 
 module.exports = router;
