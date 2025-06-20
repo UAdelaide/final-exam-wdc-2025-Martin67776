@@ -144,6 +144,10 @@ router.get('/api/walkrequests/open', async (req, res) => {
   }
 });
 
-router.get('/api/walkers')
+router.get('/api/walkers/summary', async (req, res) => {
+  try {
+
+  } catch (d)
+});
 
 module.exports = router;
