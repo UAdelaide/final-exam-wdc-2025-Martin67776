@@ -27,6 +27,6 @@ const DogPic = {
 };
 
 const app = Vue.createApp({});
-var vueapp = new Vue({
+app = component('dog-pic')
     el: '#container'
 });
