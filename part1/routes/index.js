@@ -127,7 +127,7 @@ let db;
 })();
 
 router.get('/api/dogs', (req, res) => {
-  
+  db.
 });
 
 module.exports = router;
