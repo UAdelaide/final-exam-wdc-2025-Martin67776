@@ -26,9 +26,9 @@
         <form id="loginForm">
           <div v-if="error" class="alert alert-danger">{{ error }}</div>
           <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" v-model="username"><br>
+          <input type="text" id="username" v-model="username" class="form-control"><br>
           <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" v-model="password"><br>
+          <input type="password" id="password" v-model="password" class="form-control"><br>
           <button type="button" @click="login()"  class="btn btn-primary">Log In</button>
         </form>
       </div>
