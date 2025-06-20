@@ -111,8 +111,10 @@
       },
       methods: {
         fetchDogList() {
-          fetch('/api/dogs', {}).then((res)).then((res) => {
-            this.dogList = res.body;
+          fetch('/api/dogs', {}).then((res) => {
+            return res.
+          }).then((res) => {
+            this.dogList = res.dogs;
           }).catch((err) => {
             this.error = err;
           });
