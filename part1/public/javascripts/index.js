@@ -14,7 +14,11 @@ Vue.component('dog-pic', {
     },
     methods: {
         fetchImage() {
-            fetch('https://dog.ceo/api/breeds/image/random', {}).then()
+            fetch('https://dog.ceo/api/breeds/image/random', {}).then((res) => {
+                
+            }).catch((err) => {
+                throw err;
+            })
         }
     }
 });
