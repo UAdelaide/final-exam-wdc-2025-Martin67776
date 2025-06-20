@@ -14,7 +14,7 @@ Vue.component('dog-pic', {
     },
     methods: {
         fetchImage() {
-            fetch
+            fetch('/')
         }
     }
 });
