@@ -16,5 +16,6 @@ button {
 
 img {
   background-color: yellow;
-  size: 1rem;
+  height: 10px;
+  width: 10px;
 }
