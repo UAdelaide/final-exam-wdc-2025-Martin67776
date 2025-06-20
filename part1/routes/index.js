@@ -126,6 +126,6 @@ let db;
   }
 })();
 
-router.get('/api');
+router.get('/api/dogs', );
 
 module.exports = router;
