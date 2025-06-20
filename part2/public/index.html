@@ -47,7 +47,11 @@
       },
       methods: {
         login() {
-          fetch('/api/users/login', {}).then().catch()
+          fetch('/api/users/login', {}).then((res) => {
+            
+          }).catch((err) => {
+            throw err;
+          });
         }
       }
     }
