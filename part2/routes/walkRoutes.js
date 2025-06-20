@@ -63,9 +63,9 @@ router.post('/:id/apply', async (req, res) => {
 router.get('/pets', async (req, res) => {
   const id = req.session.user.user_id;
   try {
-
+    
   } catch (dErr) {
-    return res.status(500).json({ })
+    return res.status(500).json({ error: 'DB error' });
   }
 });
 
