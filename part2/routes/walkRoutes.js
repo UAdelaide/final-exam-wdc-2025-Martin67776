@@ -61,7 +61,7 @@ router.post('/:id/apply', async (req, res) => {
 
 // Get dogs list for a specific owner
 router.get('/pets', async (req, res) => {
-  
+  const id = 
 });
 
 module.exports = router;
