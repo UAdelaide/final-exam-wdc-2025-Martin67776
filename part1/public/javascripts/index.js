@@ -16,15 +16,10 @@ const DogPic = {
     },
     methods: {
         fetchImage(count) {
-            if (count )
-            fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'GET'
-            }).then((res) => res.json())
-            .then((res) => {
-                this.picLink = res.message;
-            }).catch((err) => {
-                throw err;
-            });
+            if (count > 100) {
+
+            }
+
         }
     }
 };
