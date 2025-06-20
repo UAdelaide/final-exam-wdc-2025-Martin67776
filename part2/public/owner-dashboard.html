@@ -102,8 +102,8 @@
             method: 'GET',
             credentials: 'include'
           }).then((res) => {
-            res.json();
-            
+            return res.json().then((data))
+
           }).then((res) => {
 
           }).catch((err) => {
