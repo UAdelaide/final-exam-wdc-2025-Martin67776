@@ -134,9 +134,9 @@
             });
             const data = res.json();
             if (!res.ok) {
-              throw new Error(data.error);
-
+              throw new Error("error fetching pictures");
             }
+            return data
           } catch (err) {
             this.error = err;
           }
