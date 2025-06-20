@@ -24,8 +24,9 @@ const DogPic = {
             });
         }
     }
-});
+};
 
+const app = Vue.createApp({});
 var vueapp = new Vue({
     el: '#container'
 });
