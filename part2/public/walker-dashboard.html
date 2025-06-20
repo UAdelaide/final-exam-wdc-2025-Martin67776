@@ -45,7 +45,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const user = 3;
+        const user = get;
 
         // logout
         async function logout() {
@@ -90,7 +90,7 @@
 
         async function applyToWalk() {
           try {
-            var requestId = getCurrentUser();
+            var requestId = await getCurrentUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
