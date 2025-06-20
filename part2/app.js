@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const morgan = require('morgan');
-const db = require('../models/db');
+const db = require('./models/db');
 require('dotenv').config();
 
 const app = express();
@@ -26,7 +26,7 @@ app.use(session({
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-app.get('/', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs;');
     return res.json({ dogs: dogs });
