@@ -111,8 +111,8 @@
       },
       methods: {
         // get dog list
-        fetchDogList() {
-          fetch('/api/dogs', {}).then((res) => {
+        async fetchDogList() {
+          await fetch('/api/dogs', {}).then((res) => {
             return res.json().then((data) => {
               if (!res.ok) {
                 throw new Error(data.error || "Error fetching dog list");
@@ -132,10 +132,10 @@
         // get dog pic
         async fetchDogPic() {
           try {
-            const res = fetch('https://dog.ceo/api/breeds/image/random', {
+            const res = await fetch('https://dog.ceo/api/breeds/image/random', {
               method: 'GET'
             });
-            const data = res.json();
+            const data = await res.json();
             if (!res.ok) {
               throw new Error("error fetching pictures");
             }
