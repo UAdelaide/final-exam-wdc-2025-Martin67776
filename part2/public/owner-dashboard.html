@@ -98,7 +98,9 @@
         }
 
         async function loadDog() {
-          fetch('/api/walks/pets', {}).then().then().catch((err) => {
+          fetch('/api/walks/pets', {}).then().then((res) => {
+            
+          }).catch((err) => {
             error = err;
           });
         }
