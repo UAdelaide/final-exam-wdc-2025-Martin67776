@@ -79,6 +79,7 @@
               if (!res.ok) {
                 throw new Error(data.error || "failed fetching current user id");
               }
+              return data;
             })
           }).then((res) => {
             return res.user_id;
