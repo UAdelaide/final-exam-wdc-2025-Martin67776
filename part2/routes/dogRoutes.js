@@ -5,7 +5,7 @@ const db = require('../models/db');
 
 router.get('/', async (req, res) => {
   try {
-    const [dogs] = await db.execute('SELECT Dogs.dog_id, Dogs.name, Dogs.size, Users.username AS owner_username FROM Users INNER JOIN Dogs ON Users.user_id = Dogs.owner_id;');
+    const [dogs] = await db.execute('SELECT * FROM Dogs;');
     return res.json(dogs);
   } catch (dErr) {
     return res.status(500).json({ error: 'DB error' });
