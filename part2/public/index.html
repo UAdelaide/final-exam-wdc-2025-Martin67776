@@ -52,7 +52,9 @@
           }).then((res) => {
             return res.json();
           }).then((res) => {
-            if (res.role === 'owner')
+            if (res.role === 'owner') {
+              window.location.href = 
+            }
           }).catch((err) => {
             throw err;
           });
