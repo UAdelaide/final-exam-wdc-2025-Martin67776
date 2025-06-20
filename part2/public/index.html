@@ -20,7 +20,7 @@
   <script>
     const { createApp } = Vue;
     const LoginForm = {\
-      
+      // login form template
       template: `
       <div class="loginForm">
         <form id="loginForm">
@@ -39,6 +39,7 @@
         };
       },
       methods: {
+        // login function
         login() {
           fetch('/api/users/login', {
             method: 'POST',
