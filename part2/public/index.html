@@ -25,7 +25,7 @@
           message: 'Welcome to the Dog Walking Service!'
         };
       }
-    }).mount('#app');
+    }).mount('#app').component('login-form', LoginForm);
     const LoginForm = {
       template: `
       <div class="loginForm">
