@@ -52,7 +52,7 @@
           }).then((res) => {
             return res.json();
           }).then((res) => {
-            window.location.href = '/owner-dashboard.html';
+            if (res.role === 'owner')
           }).catch((err) => {
             throw err;
           });
