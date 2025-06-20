@@ -37,7 +37,7 @@
         return {
           username: '',
           password: '',
-          err: ''
+          error: ''
         };
       },
       methods: {
@@ -64,7 +64,7 @@
               window.location.href = '/walker-dashboard.html';
             }
           }).catch((err) => {
-            throw err;
+            this.error = err;
           });
         }
       }
