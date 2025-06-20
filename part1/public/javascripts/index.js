@@ -9,5 +9,10 @@ Vue.component('dog-pic', {
 
         };
     },
-    mounted
+    mounted: {
+        this.fetchImage();
+    },
+    methods: {
+        fetch
+    }
 });
