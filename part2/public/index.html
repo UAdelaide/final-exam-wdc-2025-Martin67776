@@ -109,7 +109,9 @@
       },
       methods: {
         fetchDogList() {
-          fetch('/api/dogs', {}).then().then().catch
+          fetch('/api/dogs', {}).then().then().catch((err) => {
+            
+          });
         }
       }
     }
