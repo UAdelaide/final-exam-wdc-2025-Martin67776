@@ -1,7 +1,7 @@
 const DogPic = {
     template: `
     <div>
-        <button
+        <button type="button"><
         <img :src="picLink" alt="Cannot retrieve image">
     </div>
     `,
