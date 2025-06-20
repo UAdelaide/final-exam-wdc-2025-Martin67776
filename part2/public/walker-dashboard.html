@@ -47,7 +47,7 @@
 
         // logout
         async function logout() {
-          fetch('/api/user/logout')
+          fetch('/api/users/logout', {}).then((res) => {})
         }
 
         async function loadWalkRequests() {
