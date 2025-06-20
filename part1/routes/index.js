@@ -146,8 +146,10 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
 router.get('/api/walkers/summary', async (req, res) => {
   try {
-
-  } catch (d)
+    
+  } catch (dErr) {
+    return res.status(500).json({ error: 'DB error' });
+  }
 });
 
 module.exports = router;
