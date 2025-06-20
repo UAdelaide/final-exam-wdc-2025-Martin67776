@@ -3,11 +3,11 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('bobwalker', 'b
 INSERT INTO Users (username, email, password_hash, role) VALUES ('carol123', 'carol@example.com', 'hashed789', 'owner');
 INSERT INTO Users (username, email, password_hash, role) VALUES ('merc123', 'merc@example.com', 'hashed012', 'walker');
 INSERT INTO Users (username, email, password_hash, role) VALUES ('user123', 'user@example.com', 'hashed345', 'owner');
-INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Max', 'medium') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'alice123');
-INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Bella', 'small') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'carol123');
-INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Sheep', 'large') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'alice123');
-INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Cat', 'medium') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'user123');
-INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Duck', 'small') WHERE owner IN (SELECT user_id FROM Users WHERE username = 'carol123');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Sheep', 'large');
+INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Cat', 'medium')(SELECT user_id FROM Users WHERE username = 'user123');
+INSERT INTO Dogs (owner_id, name, size) VALUES (owner, 'Duck', 'small')(SELECT user_id FROM Users WHERE username = 'carol123');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 30, 'Beachside Ave', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Sheep'), '2025-06-10 09:00:00', 30, 'Parklands', 'completed');
