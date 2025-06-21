@@ -112,6 +112,7 @@
       methods: {
         // get dog list
         async fetchDogList() {
+          var doglist = [];
           await fetch('/api/dogs', {}).then((res) => {
             return res.json().then((data) => {
               if (!res.ok) {
@@ -120,11 +121,11 @@
               return data;
             })
           }).then((res) => {
-            this.dogList = res.dogs;
+            doglist = res.dogs;
           }).catch((err) => {
             this.error = err;
           });
-          for (const dogs of this.dogList) {
+          for (const dogs of doglist) {
             dogs.photo = await this.fetchDogPic();
           }
         },
