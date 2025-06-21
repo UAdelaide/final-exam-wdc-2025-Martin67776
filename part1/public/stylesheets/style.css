@@ -38,7 +38,7 @@ img {
   animation: spin 1s linear infinite;
 }
 
-@keyframe spin {
+@keyframes spin {
   100% {
     transform: rotate(360deg);
   }
