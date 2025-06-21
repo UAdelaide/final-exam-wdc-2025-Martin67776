@@ -33,5 +33,6 @@ img {
   background-color: #00B7FF;
   color: white;
   border-radius: 8px;
-  
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }
