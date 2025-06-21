@@ -38,5 +38,9 @@ img {
 }
 
 .spin-button:hover {
-  animation
+  animation: spin 1s linear infinite;
+}
+
+@keyframe spin {
+  100
 }
