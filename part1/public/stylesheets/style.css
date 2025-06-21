@@ -35,7 +35,7 @@ img {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  animation: spin 1s linear infinite;
+  animation: spin-move 1s linear infinite;
 }
 
 @keyframes spin {
